@@ -42,7 +42,7 @@
   "resources": [
     {
       "type": "Microsoft.ContainerRegistry/registries",
-      "apiVersion": "2019-12-01",
+      "apiVersion": "2021-11-01-preview",
       "name": "[parameters('registryName')]",
       "location": "[parameters('location')]",
       "sku": {
