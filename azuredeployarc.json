@@ -26,31 +26,18 @@
       "metadata": {
         "description": "The SKU of the Azure Container Registry."
       }
-    },
-    "networkRule": {
-      "type": "object",
-      "defaultValue": {
-        "defaultAction": "Deny",
-        "virtualNetworkRules": [],
-        "ipRules": []
-      },
-      "metadata": {
-        "description": "Network rule configuration for the Azure Container Registry."
-      }
     }
   },
   "resources": [
     {
       "type": "Microsoft.ContainerRegistry/registries",
-      "apiVersion": "2023-07-01",
+      "apiVersion": "2021-08-01",
       "name": "[parameters('registryName')]",
       "location": "[parameters('location')]",
       "sku": {
         "name": "[parameters('sku')]"
       },
-      "properties": {
-        "networkRuleSet": "[parameters('networkRule')]"
-      }
+      "properties": {}
     }
   ],
   "outputs": {
